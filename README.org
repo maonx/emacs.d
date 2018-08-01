@@ -1,1 +1,12 @@
-* My emacs.d
+* 我的Emacs 配置
+准备试一下从Vim 转到Emacs，先整理测试一个基本可以的Emacs 配置，并且想使用Org-mode。
+这个配置设想是用什么配置什么，一步步学习配置。
+
+** 配置目标
+1. [ ] 美化界面
+2. [ ] Org-mode
+   - [ ] Org-Capture
+   - [ ] Org-agenda
+3. [ ] HTML-mode
+4. [ ] CSS-mode
+5. [ ] Python-mode
