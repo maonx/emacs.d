@@ -4,6 +4,9 @@
 ;; Hide scroll bar
 (scroll-bar-mode -1)
 
+;; Hide menu bar
+(menu-bar-mode -1)
+
 ;; Change the cursor style
 (setq-default cursor-type 'bar)
 
