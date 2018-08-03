@@ -13,4 +13,10 @@
 ;; Hide welcome buffer
 (setq inhibit-startup-screen t)
 
+;; Highlight the current line
+(global-hl-line-mode t)
+
+;; Show paren
+(show-paren-mode 1)
+
 (provide 'init-ui)
