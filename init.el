@@ -27,6 +27,13 @@
 (require 'init-bindkeys)
 
 (set-default-font "Microsoft YaHei Mono 13")
+(setq default-buffer-file-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+
+
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

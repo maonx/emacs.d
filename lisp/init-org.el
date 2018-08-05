@@ -6,15 +6,17 @@
 
 (global-set-key (kbd "C-c c") 'org-capture)
 (setq org-default-notes-file "~/Dropbox/org/inbox.org")
+(global-set-key (kbd "C-c a") 'org-agenda)
+(setq org-agenda-files (list "~/Dropbox/org"))
 
 (setq org-capture-templates nil)
 
 (add-to-list 'org-capture-templates
-             '("w" "Web Collections" entry
-               (file+headline "~/Dropbox/org/inbox.org" "Web")
-               "* %U %:annotation\n\n%:initial\n\n%?"))
+             '("r" "稍后阅读" entry
+               (file+headline "~/Dropbox/org/inbox.org" "稍后阅读")
+               "* [ ] %?\t%x\n创建于：%U"))
 (add-to-list 'org-capture-templates
-             '("t" "teb Collections" entry
-               (file+headline "~/Dropbox/org/inbox.org" "Test")
-               "* %U %:description\n\n%:link\n\n%?"))
+             '("t" "待办事项" entry
+               (file+headline "~/Dropbox/org/todo.org" "待办事项")
+               "* TODO %?\n创建于：%U\n%a"))
 (provide 'init-org)
