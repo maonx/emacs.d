@@ -13,10 +13,18 @@
 
 (add-to-list 'org-capture-templates
              '("r" "稍后阅读" entry
-               (file+headline "~/Dropbox/org/inbox.org" "稍后阅读")
+               (file+headline "~/Dropbox/org/todo.org" "稍后阅读")
                "* [ ] %?\t%x\n创建于：%U"))
 (add-to-list 'org-capture-templates
              '("t" "待办事项" entry
                (file+headline "~/Dropbox/org/todo.org" "待办事项")
-               "* TODO %?\n创建于：%U\n%a"))
+               "* TODO %?\n创建于：%U\n"))
+(add-to-list 'org-capture-templates
+             '("m" "备忘录" entry
+               (file+headline "~/Dropbox/org/todo.org" "备忘录")
+               "* TODO %?\n创建于：%U\n"))
+(add-to-list 'org-capture-templates
+             '("l" "生活" entry
+               (file+headline "~/Dropbox/org/todo.org" "生活")
+               "* TODO %?\n创建于：%U\n"))
 (provide 'init-org)
