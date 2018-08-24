@@ -26,7 +26,7 @@
 (add-to-list 'org-capture-templates
              '("l" "生活" entry
                (file+headline "~/Dropbox/org/todo.org" "生活")
-               "* %?\n"))
+               "* %U %?\n"))
 (add-to-list 'org-capture-templates
              '("b" "记帐" table-line
                (file+headline "~/Dropbox/org/todo.org" "记帐")

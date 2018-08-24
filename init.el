@@ -20,6 +20,15 @@
   :config
   (dashboard-setup-startup-hook))
 
+(use-package projectile
+  :ensure t
+  :config
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
+(use-package company
+  :ensure t
+  :config
+  (add-hook 'after-init-hook 'global-company-mode))
 (use-package magit
   :ensure t)
 (use-package powerline
@@ -42,6 +51,33 @@
          ("M-<f5>" . helm-find-files)
          ([f10] . helm-buffers-list)
          ([S-f10] . helm-recentf)))
+
+(use-package cnfonts
+  :ensure t
+  :config (cnfonts-enable))
+
+(use-package pyim
+  :ensure t
+  :demand t
+  :config
+  (use-package pyim-wbdict
+    :ensure t
+    :config (pyim-wbdict-gbk-enable))
+
+  (setq default-input-method "pyim")
+  (setq pyim-default-scheme 'wubi)
+  (add-hook 'emacs-startup-hook
+            #'(lambda () (pyim-restart-1 t)))
+  )
+
+;;Exit insert mode by pressing j and then j quickly
+(use-package key-chord
+  :ensure t
+  :config
+    (setq key-chord-two-keys-delay 0.5)
+    (key-chord-define evil-insert-state-map "fd" 'evil-normal-state)
+    (key-chord-mode 1)
+)
 
 (require 'init-org)
 (require 'init-ui)
@@ -84,7 +120,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit ample-theme powerline-evil dashboard evil-leader org-bullets use-package monokai-theme helm evil))))
+    (key-chord pyim-wbdict pyim cnfonts company projectile magit ample-theme powerline-evil dashboard evil-leader org-bullets use-package monokai-theme helm evil))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
