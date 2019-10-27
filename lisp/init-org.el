@@ -6,8 +6,11 @@
 
 (global-set-key (kbd "C-c c") 'org-capture)
 (setq org-default-notes-file "~/Dropbox/org/inbox.org")
+
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-files (list "~/Dropbox/org"))
+
+(setq truncate-lines nil)
 
 (setq org-capture-templates nil)
 
