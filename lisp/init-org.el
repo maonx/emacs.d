@@ -1,8 +1,8 @@
 ;; Show org-mode bullets as UTF-8 Characters.
-(use-package org-bullets
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+;;(use-package org-bullets
+  ;;:ensure t
+;;  :config
+;;  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (global-set-key (kbd "C-c c") 'org-capture)
 (setq org-default-notes-file "~/Dropbox/org/inbox.org")
