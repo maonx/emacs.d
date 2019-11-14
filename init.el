@@ -53,6 +53,11 @@
 
 (require 'init-org)
 
+(use-package evil
+  :ensure t
+  :config
+  (evil-mode 1))
+
 (use-package dashboard
   :ensure t
   :config
@@ -142,7 +147,7 @@
     ("f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" default)))
  '(package-selected-packages
    (quote
-    (php-mode company dashboard use-package org-bullets doom-themes counsel))))
+    (magit evil php-mode company dashboard use-package org-bullets doom-themes counsel))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
