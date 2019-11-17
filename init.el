@@ -58,6 +58,20 @@
   :config
   (evil-mode 1))
 
+(use-package key-chord
+  :ensure t
+  :config
+  (setq key-chord-two-keys-delay 0.2)
+(key-chord-define evil-insert-state-map "fd" 'evil-normal-state)
+(key-chord-mode 1)
+)
+
+(use-package evil-matchit
+  :ensure t
+  :config
+  (setq evilmi-shortcut "m")
+  (global-evil-matchit-mode 1)
+  )
 (use-package dashboard
   :ensure t
   :config
@@ -82,6 +96,12 @@
   :ensure t
   :config
   (add-to-list 'auto-mode-alist '("\\.\\(?:php\\|phtml\\)\\'" . php-mode))
+  )
+
+(use-package web-mode
+  :ensure t
+  :config
+  (web-mode 1)
   )
 
 (use-package ivy
@@ -144,10 +164,10 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" default)))
+    ("f30aded97e67a487d30f38a1ac48eddb49fdb06ac01ebeaff39439997cbdd869" "5e0b63e0373472b2e1cf1ebcc27058a683166ab544ef701a6e7f2a9f33a23726" "a2286409934b11f2f3b7d89b1eaebb965fd63bc1e0be1c159c02e396afb893c8" "f951343d4bbe5a90dba0f058de8317ca58a6822faa65d8463b0e751a07ec887c" "f2b83b9388b1a57f6286153130ee704243870d40ae9ec931d0a1798a5a916e76" "728eda145ad16686d4bbb8e50d540563573592013b10c3e2defc493f390f7d83" "2d1fe7c9007a5b76cea4395b0fc664d0c1cfd34bb4f1860300347cdad67fb2f9" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" default)))
  '(package-selected-packages
    (quote
-    (magit evil php-mode company dashboard use-package org-bullets doom-themes counsel))))
+    (evil-matchit web-mode key-chord evil-magit magit evil php-mode company dashboard use-package org-bullets doom-themes counsel))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
