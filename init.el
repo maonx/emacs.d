@@ -29,6 +29,9 @@
 
 (global-hl-line-mode t)
 
+;; 自动刷新更改的缓冲区
+(global-auto-revert-mode t)
+
 (setq make-backup-files nil)
 
 ;; 快速打开配置文件
@@ -101,7 +104,9 @@
 (use-package web-mode
   :ensure t
   :config
-  (web-mode 1)
+  (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   )
 
 (use-package ivy
