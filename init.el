@@ -29,6 +29,9 @@
 
 (global-hl-line-mode t)
 
+;; 自动刷新更改的缓冲区
+(global-auto-revert-mode t)
+
 (setq make-backup-files nil)
 
 ;; 快速打开配置文件
