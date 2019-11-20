@@ -104,7 +104,9 @@
 (use-package web-mode
   :ensure t
   :config
-  (web-mode 1)
+  (add-to-list 'auto-mode-alist '("\\.php\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
+  (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
   )
 
 (use-package ivy
