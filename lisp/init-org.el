@@ -15,12 +15,12 @@
 (setq org-capture-templates nil)
 
 (add-to-list 'org-capture-templates
-             '("r" "稍后阅读" entry
-               (file+headline "~/Dropbox/org/inbox.org" "稍后阅读")
-               "* [ ] %?\t%x\n创建于：%U"))
+             '("i" "Inbox" entry
+               (file+headline "~/Dropbox/org/inbox.org" "Inbox")
+               "* %U - %^{标题} %^g\n %?\n"))
 (add-to-list 'org-capture-templates
-             '("t" "待办事项" entry
-               (file+headline "~/Dropbox/org/todo.org" "待办事项")
+             '("t" "Tasks" entry
+               (file+headline "~/Dropbox/org/todo.org" "Tasks")
                "* TODO %?\n创建于：%U\n"))
 (add-to-list 'org-capture-templates
              '("m" "备忘录" entry
