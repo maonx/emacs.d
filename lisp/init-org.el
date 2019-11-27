@@ -17,21 +17,21 @@
 (add-to-list 'org-capture-templates
              '("i" "Inbox" entry
                (file+headline "~/Dropbox/org/inbox.org" "Inbox")
-               "* %U - %^{标题} %^g\n %?\n"))
+               "* %U - %^{Title} %^G\n %?\n"))
 (add-to-list 'org-capture-templates
              '("t" "Tasks" entry
                (file+headline "~/Dropbox/org/todo.org" "Tasks")
-               "* TODO %?\n创建于：%U\n"))
+               "* TODO %^{Title} %^G\n %?\n"))
+;; (add-to-list 'org-capture-templates
+;;              '("m" "备忘录" entry
+;;                (file+headline "~/Dropbox/org/todo.org" "备忘录")
+;;                "* TODO %?\n创建于：%U\n"))
 (add-to-list 'org-capture-templates
-             '("m" "备忘录" entry
-               (file+headline "~/Dropbox/org/todo.org" "备忘录")
-               "* TODO %?\n创建于：%U\n"))
-(add-to-list 'org-capture-templates
-             '("l" "生活" entry
-               (file+headline "~/Dropbox/org/todo.org" "生活")
-               "* %U %?\n"))
-(add-to-list 'org-capture-templates
-             '("b" "记帐" table-line
-               (file+headline "~/Dropbox/org/todo.org" "记帐")
-               "| %U | %^{消费分类} | %^{消费商品} | %^{消费金额} |" :kill-buffer t))
+             '("l" "Life" entry
+               (file+olp+datetree "~/Dropbox/org/life.org" "Life")
+               "* %U - %^{Title}\n %?\n"))
+;; (add-to-list 'org-capture-templates
+;;              '("b" "记帐" table-line
+;;                (file+headline "~/Dropbox/org/todo.org" "记帐")
+;;                "| %U | %^{消费分类} | %^{消费商品} | %^{消费金额} |" :kill-buffer t))
 (provide 'init-org)
