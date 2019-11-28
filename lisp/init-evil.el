@@ -28,6 +28,8 @@
    "f" 'counsel-find-file
    "b" 'switch-to-buffer
    "w" 'save-buffer
+   "oc" 'org-capture
+   "oa" 'org-agenda
    "k" 'kill-buffer)
   )
 
@@ -39,4 +41,11 @@
   (define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
   )
 
+(use-package evil-escape
+  :ensure
+  :config
+  (evil-escape-mode 1)
+  (setq-default evil-escape-key-sequence "fd")
+  (setq-default evil-escape-delay 0.2)
+  )
 (provide 'init-evil)

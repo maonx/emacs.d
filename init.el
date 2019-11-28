@@ -24,12 +24,6 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 (load custom-file)
 
-(tool-bar-mode -1)
-
-(scroll-bar-mode -1)
-
-(menu-bar-mode -1)
-
 (setq inhibit-splash-screen t)
 
 (global-hl-line-mode t)
@@ -56,8 +50,6 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-
-
 
 (use-package dashboard
   :ensure t
@@ -149,3 +141,4 @@
 
 (require 'init-org)
 (require 'init-evil)
+(require 'init-ui)
