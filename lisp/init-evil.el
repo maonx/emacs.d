@@ -2,15 +2,17 @@
   :ensure t
   :config
   (evil-mode 1)
+  (evil-set-initial-state 'dired-mode 'emacs)
+  (evil-set-initial-state 'dashboard-mode 'emacs)
   )
 
-(use-package key-chord
-  :ensure t
-  :config
-  (setq key-chord-two-keys-delay 0.2)
-  (key-chord-define evil-insert-state-map "fd" 'evil-normal-state)
-  (key-chord-mode 1)
-  )
+;; (use-package key-chord
+;;   :ensure t
+;;   :config
+;;   (setq key-chord-two-keys-delay 0.2)
+;;   (key-chord-define evil-insert-state-map "fd" 'evil-normal-state)
+;;   (key-chord-mode 1)
+;;   )
 
 (use-package evil-matchit
   :ensure t
