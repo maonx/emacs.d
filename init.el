@@ -94,7 +94,15 @@
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
 
-
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-mode 1)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  )
+;; (use-package projectile
+;;   :ensure t
+;;   )
 
 (require 'init-org)
 (require 'init-evil)
