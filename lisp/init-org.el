@@ -14,6 +14,8 @@
 
 (setq org-capture-templates nil)
 
+(setq org-log-done 'time)
+
 (add-to-list 'org-capture-templates
              '("i" "Inbox" entry
                (file+headline "d:/org/inbox.org" "Inbox")
@@ -34,4 +36,5 @@
 ;;              '("b" "记帐" table-line
 ;;                (file+headline "d:/org/todo.org" "记帐")
 ;;                "| %U | %^{消费分类} | %^{消费商品} | %^{消费金额} |" :kill-buffer t))
+
 (provide 'init-org)
