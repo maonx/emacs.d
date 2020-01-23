@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/Documents/taobaoSDK/htdocs/banners/" "d:/org/")
+("~/.emacs.d/" "d:/org/" "~/Documents/taobaoSDK/htdocs/banners/")

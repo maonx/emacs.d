@@ -8,7 +8,15 @@
 (setq org-default-notes-file "d:/org/inbox.org")
 
 (global-set-key (kbd "C-c a") 'org-agenda)
-(setq org-agenda-files (list "d:/org"))
+(setq org-agenda-files (list "d:/org/inbox.org"
+			     "d:/org/todo.org"
+			     "d:/org/beorg.org"
+			     "d:/org/life.org"
+			     ))
+
+(setq org-agenda-text-search-extra-files
+        (list "d:/org/archive.org"
+  ))
 
 (setq truncate-lines nil)
 
@@ -19,22 +27,22 @@
 (add-to-list 'org-capture-templates
              '("i" "Inbox" entry
                (file+headline "d:/org/inbox.org" "Inbox")
-               "* %U - %^{Title} %^G\n %?\n"))
+               "* %U - %^{Title} %^G\n %?\n" :empty-lines 1))
 (add-to-list 'org-capture-templates
              '("t" "Tasks" entry
                (file+headline "d:/org/todo.org" "Tasks")
-               "* TODO %^{Title} %^G\n %?\n"))
-;; (add-to-list 'org-capture-templates
-;;              '("m" "备忘录" entry
-;;                (file+headline "d:/org/todo.org" "备忘录")
-;;                "* TODO %?\n创建于：%U\n"))
+               "* TODO %^{Title} %^G\n %?\n" :empty-lines 1))
 (add-to-list 'org-capture-templates
              '("l" "Life" entry
                (file+olp+datetree "d:/org/life.org" "Life")
-               "* %U - %^{Title}\n %?\n"))
-;; (add-to-list 'org-capture-templates
-;;              '("b" "记帐" table-line
-;;                (file+headline "d:/org/todo.org" "记帐")
-;;                "| %U | %^{消费分类} | %^{消费商品} | %^{消费金额} |" :kill-buffer t))
+               "* %U - %^{Title}\n %?\n" :empty-lines 1))
+
+(setq org-refile-targets '((nil :maxlevel . 2)
+                             (org-agenda-files :maxlevel . 2)
+                             ("d:/org/archive.org" :maxlevel . 2)
+                             )
+        )
+(setq org-outline-path-complete-in-steps nil)         ; Refile in a single go
+(setq org-refile-use-outline-path 'file)
 
 (provide 'init-org)
