@@ -154,6 +154,22 @@
   (("M-j" . pyim-convert-string-at-point) ;与 pyim-probe-dynamic-english 配合
    ("C-;" . pyim-delete-word-from-personal-buffer)))
 
+(use-package beancount
+  :load-path "lisp"
+  :ensure nil
+  :bind
+  ("C-M-b" . (lambda ()
+	       (interactive)
+	       (find-file "~/myBeanCount/main.bean")))
+  :mode
+  ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
+  :config
+  (setq beancount-accounts-files
+	(directory-files "~/myBeanCount/accounts.bean"
+			 'full
+			 (rx ".bean" eos)))
+  )
+
 
 (require 'init-org)
 (require 'init-evil)
