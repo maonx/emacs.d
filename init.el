@@ -165,11 +165,10 @@
   ("\\.bean\\(?:count\\)?\\'" . beancount-mode)
   :config
   (setq beancount-accounts-files
-	(directory-files "~/myBeanCount/accounts.bean"
+	(directory-files "~/myBeanCount/"
 			 'full
 			 (rx ".bean" eos)))
   )
-
 
 (require 'init-org)
 (require 'init-evil)
