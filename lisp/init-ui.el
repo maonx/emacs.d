@@ -31,21 +31,21 @@
 	     :config
 	     (load-theme 'doom-one-light t))
 
-(use-package dashboard
-  :ensure t
-  :config
-  (dashboard-setup-startup-hook)
-  ;; Content is not centered by default. To center, set
-  (setq dashboard-center-content t)
-  (setq dashboard-set-footer nil)
-  (setq dashboard-items '((recents  . 5)
-			  (projects . 5)
-			  (agenda . 5)
-			  (bookmarks . 5)
-			  ))
-  (setq dashboard-set-heading-icons t)
-  (setq dashboard-set-file-icons t)
-  )
+;; (use-package dashboard
+;;   :ensure t
+;;   :config
+;;   (dashboard-setup-startup-hook)
+;;   ;; Content is not centered by default. To center, set
+;;   (setq dashboard-center-content t)
+;;   (setq dashboard-set-footer nil)
+;;   (setq dashboard-items '((recents  . 5)
+;; 			  (projects . 5)
+;; 			  (agenda . 5)
+;; 			  (bookmarks . 5)
+;; 			  ))
+;;   (setq dashboard-set-heading-icons t)
+;;   (setq dashboard-set-file-icons t)
+;;   )
 
 (use-package page-break-lines
   :ensure t)

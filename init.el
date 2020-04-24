@@ -39,6 +39,8 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+(server-start)
+
 ;; 这一行代码，将函数 open-init-file 绑定到 <f5> 键上
 (global-set-key (kbd "<f5>") 'open-init-file)
 
